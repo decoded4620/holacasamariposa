@@ -1,0 +1,28 @@
+@import '../shared-page-styles.module.scss';
+
+.cards {
+  flex-direction: column;
+  flex: 1;
+}
+
+.jardinheader {
+  color: rgb(248, 131, 121);
+  @extend .pagenoselect;
+}
+
+.mariposaheader {
+  color: rgb(175, 180, 91);
+  @extend .pagenoselect;
+}
+
+.birdhouseheader {
+  color: rgb(213, 89, 58);
+  @extend .pagenoselect;
+}
+
+@media screen and (min-width: $minWebLayoutWidth) {
+  .cards {
+      flex-direction: row !important;
+      width: 100%;
+  }
+}

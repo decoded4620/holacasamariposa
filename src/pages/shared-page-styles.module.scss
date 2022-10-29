@@ -1,0 +1,76 @@
+$minWebLayoutWidth: 675px;
+
+/* see: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.pagenoselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.centercontent {
+    text-align: center;
+    align-content: center;
+}
+
+.page {
+    padding-bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    animation: fadeIn 1s;
+}
+
+.pagecontent {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(223, 222, 222);
+}
+
+.lastpagecontent {
+    @extend .pagecontent;
+    border-bottom: none;
+}
+
+@media screen and (min-width:$minWebLayoutWidth) {
+    .page {
+        padding-bottom: 25px;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.pageHeader {
+    font-family: stratos;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.7rem;
+    @extend .pagenoselect;
+}
+
+.pageText {
+    font-size: 1.5rem;
+    font-family: stratos;
+    font-weight: 200;
+    text-align: center;
+    @extend .pagenoselect;
+}

@@ -1,0 +1,17 @@
+@import '../shared-page-styles.module.scss';
+
+// mobile and web layout cards should be in 2 columns.
+.cardsContainer {
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardBlock {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  display: flex;
+  padding: 16px;
+  padding-bottom: 0px;
+  margin: 0 auto;
+}

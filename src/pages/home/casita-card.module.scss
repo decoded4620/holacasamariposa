@@ -1,0 +1,28 @@
+@import '../shared-page-styles.module.scss';
+
+.casitacard {
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border-bottom: 6px solid white;
+}
+
+.casitacard:hover {
+  border-bottom: 6px solid orange;
+  position: relative;
+}
+
+.casitaimg {
+  max-width: 100%;
+}
+
+@media screen and (min-width: $minWebLayoutWidth) {
+  .casitacard {
+      max-width: 320px !important;
+      min-width: 200px !important;
+      width: 31%;
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 0px;
+  }
+}

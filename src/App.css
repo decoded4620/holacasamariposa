@@ -24,6 +24,18 @@
   color: white;
 }
 
+.pagearea {
+  padding-bottom: 0px;
+}
+
+
+@media screen and (min-width: 675px) {
+  .pagearea {
+    padding-bottom: 42px;
+  }
+}
+
+
 .App-link {
   color: #61dafb;
 }

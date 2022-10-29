@@ -1,0 +1,50 @@
+{
+    "chrome": {
+        "siteLogoText": "Casa Mariposa",
+        "siteLogoShortText": "Mariposa"
+    },
+    "content": {
+        "home": {
+            "pageHeading": "Relax like never before...",
+            "casitaJardinHeading": "El Jardin",
+            "casitaMariposaHeading": "Casa Mariposa",
+            "casitaBirdhouseHeading": "Birdhouse",
+            "casitasFeatureHeading": "Our Casitas Feature...",
+            "casitasFeatureText": "<p>All the essentials needed for the <i>perfect</i> México vacation, or the Digital Nomad! Including...</p>",
+            "casitasFeatures": [
+                {
+                    "blurb": "5 min. to the beach",
+                    "fontAwesomeIconClassName": "fas fa-walking"
+                },
+                {
+                    "blurb": "1 hr drive to PVR",
+                    "fontAwesomeIconClassName": "fas fa-plane-departure"
+                },
+                {
+                    "blurb": "78°F (25.5°C) Avg",
+                    "fontAwesomeIconClassName": "fas fa-sun"
+                },
+                {
+                    "blurb": "High Speed WiFi (100mpbs)",
+                    "fontAwesomeIconClassName": "fas fa-wifi"
+                },
+                {
+                    "blurb": "Drinking Water",
+                    "fontAwesomeIconClassName": "fas fa-tint"
+                },
+                {
+                    "blurb": "Pet Friendly*",
+                    "fontAwesomeIconClassName": "fas fa-cat"
+                }
+            ],
+            "intro": "<p><i>Casa Mariposa</i> offers several options to make Sayulita feel like your home away from home. Enjoy privacy and comfort with a local vibe.</p>"
+        },
+        "casitas": {
+            "pageHeading": ""
+        },
+        "location": {
+            "pageHeading": ""
+        },
+        "resources": {}
+    }
+}

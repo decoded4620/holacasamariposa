@@ -1,0 +1,21 @@
+.footer {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    bottom: 0;
+    min-height: 50px !important;
+    height: 50px;
+    width: 100%;
+    background-color: whitesmoke;
+    font-size: 0.8rem !important;
+    font-weight: 200 !important;
+    border-top: 1px solid rgb(215, 215, 215);
+}
+
+.footertoolbar {
+    min-height: 50px !important;
+}
+
+.footerbutton {
+    color: rgb(0, 110, 73);
+}

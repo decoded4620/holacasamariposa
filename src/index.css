@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'stratos';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-family: 'presicav';
+}
+h2, h3, h4 {
+  font-family: 'stratos';
+}
+
+p {
+  font-family: 'stratos';
+}
+
+button {
+  font-family: 'stratos' !important;
+  font-size: inherit !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
 }

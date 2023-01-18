@@ -23,7 +23,7 @@ export interface HomePageProps extends BasePageProps {
   pageTranslations?: I18NData_HomePage;
 }
 
-function Home(props: HomePageProps) {
+function HomePage(props: HomePageProps) {
   updateApplicationContext(
     useContext(ReactApplicationContext),
     props,
@@ -120,7 +120,7 @@ function Home(props: HomePageProps) {
   );
 }
 
-export default function (props: HomePageProps) {
+export default function Home(props: HomePageProps) {
   const navigate = useNavigate();
-  return <Home {...props} navigate={navigate} />;
+  return <HomePage {...props} navigate={navigate} />;
 }

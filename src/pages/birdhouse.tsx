@@ -8,7 +8,7 @@ import {
 } from "../app/application-ctx";
 import { useContext } from "react";
 import CasitaDetails from "./shared/casita-details";
-import { I18NData_BirdhousePage, I18NData_MariposaPage } from "../app-i18n";
+import { I18NData_BirdhousePage } from "../app-i18n";
 
 export interface BirdhouseProps extends CasitaPageProps {
   pageTranslations?: I18NData_BirdhousePage;

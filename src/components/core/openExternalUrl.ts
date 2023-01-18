@@ -1,4 +1,3 @@
-import { Location } from "react-router-dom";
 import { ExternalUrl } from "./types";
 
 /**

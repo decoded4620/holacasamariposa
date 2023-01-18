@@ -1,4 +1,4 @@
-import { NavigateFunction, useNavigate } from "react-router-dom";
+import { NavigateFunction } from "react-router-dom";
 import { ButtonData, ButtonId, UrlMappings } from "../components/core/types";
 
 // Map button click (identifiers) to local urls

@@ -13,15 +13,6 @@ export interface FooterProps {
 
 export default function Footer(props: FooterProps) {
   // save current window width in the state object
-  // TODO: use width the render buttons or visibility
-  let [width, setWidth] = React.useState(getWindowWidth());
-
-  // in this case useEffect will execute only once because
-  // it does not have any dependencies.
-  useEffect(() => {
-    return windowResizeEffect(() => setWidth(getWindowWidth()));
-  }, [setWidth]);
-
   const onNavItemClicked = (buttonId?: ButtonId) => {
     if (buttonId === undefined) {
       throw new Error(`Button has no assigned id!`);
@@ -40,7 +31,7 @@ export default function Footer(props: FooterProps) {
               key: i, // needed for react createElement to work
               color: "inherit",
               className: styles.footerbutton,
-              onClick: (event: unknown) => onNavItemClicked(menuItemData.id),
+              onClick: (_event: unknown) => onNavItemClicked(menuItemData.id),
             },
             menuItemData.label
           )

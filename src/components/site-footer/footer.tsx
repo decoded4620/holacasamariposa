@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import { Button, Toolbar } from "@mui/material";
 import styles from "./footer.module.scss";
 import { ButtonId, IdButtonHandler, ButtonData } from "../core/types";
+import React from "react";
 
 export interface FooterProps {
   handleNavItemClick: IdButtonHandler;

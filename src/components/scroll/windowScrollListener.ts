@@ -4,7 +4,7 @@ export type ScrollHandler = () => void;
 
 /**
  * Enables handling window resize. Example:
- * 
+ *
  * ```
  * export default function MyComponent {
  *   // save current window width in the state object
@@ -17,25 +17,36 @@ export type ScrollHandler = () => void;
  *  }, []);
  * }
   ```
- * @param handler 
- * @param timeout 
+ * @param handler
+ * @param timeout
  * @returns a render function for  use by a component
  */
-export const windowScrollEffect = (handler: ScrollHandler, timeout = 50): RenderFunction => {
-    // timeoutId for debounce mechanism
-    let timeoutId: string | number | NodeJS.Timeout | undefined;
-    const scrollListener = () => {
-        handler();
-    };
-    // set resize listener
-    window.addEventListener('scroll', scrollListener);
+export const windowScrollEffect = (
+  handler: ScrollHandler,
+  timeout = 50
+): RenderFunction => {
+  // timeoutId for debounce mechanism
+  let timeoutId: string | number | NodeJS.Timeout | undefined;
 
-    // clean up function
-    return () => {
-        // remove resize listener
-        window.removeEventListener('scroll', scrollListener);
+  const scrollListener = () => {
+    if (timeout > 0) {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(handler, timeout);
+    } else {
+      handler();
     }
-}
-    
+  };
+  // set resize listener
+  window.addEventListener("scroll", scrollListener);
+
+  // clean up function
+  return () => {
+    // remove resize listener
+    window.removeEventListener("scroll", scrollListener);
+  };
+};
+
 export const getWindowScrollY = () => window.scrollY;
 export const getWindowScrollX = () => window.scrollX;

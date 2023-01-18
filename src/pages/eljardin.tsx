@@ -1,28 +1,62 @@
-import styles from './eljardin.module.scss';
+import styles from "./eljardin.module.scss";
 
-import { Box } from "@mui/system";
-import BasePage, { BasePageProps } from '../app/base-page';
-import { ReactNode } from 'react';
+import { CasitaPageProps } from "../app/base-page"
 
-export interface ElJardinProps extends BasePageProps {
+import { useLocation } from "react-router-dom";
+import {
+  ReactApplicationContext,
+  updateApplicationContext,
+} from "../app/application-ctx";
+import { useContext } from "react";
+import CasitaDetails from "./shared/casita-details";
+import { I18NData_ElJardinPage } from "../app-i18n";
+import { Box } from "@mui/material";
 
+export interface ElJardinProps extends CasitaPageProps {
+  pageTranslations?: I18NData_ElJardinPage;
 }
 
-export default class ElJardin extends BasePage {
-    constructor(public props: ElJardinProps) {
-        super(props);
-    }
+export default function ElJardin(props: ElJardinProps) {
+  const ctx = useContext(ReactApplicationContext);
+  const i18n = props.pageTranslations;
+  updateApplicationContext(ctx, props, useLocation());
+  const gridImageIds = i18n?.gridImageIds || [];
+  const sliderImageIds = i18n?.sliderImageIds || [];
 
-    public getTopContentHeight(): number {
-        return 280;
-    }
+  const gridImages = gridImageIds.map((id) => {
+    return {
+      src: `${ctx.cdn}/${id}_M.jpg`,
+      width: 3,
+      height: 4,
+      title: "",
+    };
+  });
 
-    render(): ReactNode {
-        return (<Box className={styles.TestStyle}>
-            <h1>El Jardin</h1>
-            <h2>Private</h2>
-            <p>house</p>
-        </Box>);
-    }
+  const sliderImages = sliderImageIds.map((id) => {
+    return {
+      src: `${ctx.cdn}/${id}_M.jpg`,
+      width: 4,
+      height: 3,
+      title: `Slider Image ${id}`,
+    };
+  });
+
+  return (
+    <Box>
+      <CasitaDetails
+        backgroundImage={styles.imagebg}
+        bookingLabel="Book Now"
+        bookingLink={props.bookingLink}
+        pageHeading={i18n?.pageHeading || ''}
+        featureATitle={i18n?.featureATitle || ''}
+        featureBTitle={i18n?.featureBTitle || ''}
+        featuresA={i18n?.featuresA || []}
+        featuresB={i18n?.featuresB || []}
+        gridImages={gridImages}
+        sliderImages={sliderImages}
+        styles={styles}
+        pageText={props.pageText}
+      />
+    </Box>
+  );
 }
-

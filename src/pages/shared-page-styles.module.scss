@@ -31,9 +31,9 @@ $minWebLayoutWidth: 675px;
 .pagecontent {
     margin: 0 auto;
     max-width: 800px;
-    padding: 20px;
+    padding: 30px;
     padding-top: 5px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     border-bottom: 1px solid rgb(223, 222, 222);
 }
 
@@ -74,3 +74,11 @@ $minWebLayoutWidth: 675px;
     text-align: center;
     @extend .pagenoselect;
 }
+
+.buttonRow {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }

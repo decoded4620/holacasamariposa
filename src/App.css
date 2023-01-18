@@ -28,6 +28,11 @@
   padding-bottom: 0px;
 }
 
+.centercontent {
+  position: fixed;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+}
 
 @media screen and (min-width: 675px) {
   .pagearea {

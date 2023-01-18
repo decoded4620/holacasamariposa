@@ -1,9 +1,6 @@
 export class CurrentPageTracker {
     private route: string = '/';
 
-    constructor() {
-    }
-
     public set(route: string) {
         this.route = route;
     }

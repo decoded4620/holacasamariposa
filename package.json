@@ -3,8 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@braintree/sanitize-url": "^6.0.2",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.1",
     "@types/react": "^18.0.17",
@@ -20,12 +25,15 @@
     "polished": "^4.2.2",
     "query-string": "^7.0.1",
     "react": "^18.2.0",
+    "react-cache-buster": "^0.1.7",
     "react-dom": "^18.2.0",
+    "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
     "sass": "^1.54.8",
     "sequelize": "^6.6.5",
+    "swiper": "^8.4.5",
     "ts-node": "^10.2.1",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4",
@@ -44,10 +52,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn generate-meta-tag && react-scripts build",
     "test": "jest --config jest.config.ts",
     "test:integration": "jest --config jest-integration.config.ts",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-meta-tag": "node ./node_modules/react-cache-buster/dist/generate-meta-tag.js"
+
   },
   "eslintConfig": {
     "extends": [

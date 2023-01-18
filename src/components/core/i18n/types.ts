@@ -69,6 +69,7 @@ export class I18N {
         `Translations loaded from ${url}, status: ${data.status} ${data.statusText} `,
         url
       );
+
       return data.data;
     } catch (error) {
       throw new I18LangNotSupportedError(

@@ -1,3 +1,4 @@
+import { Location } from "react-router-dom";
 import { ExternalUrl } from "./types";
 
 /**
@@ -19,4 +20,18 @@ export const openExternalUrl = (externalUrl: ExternalUrl) => {
   ) {
     window.location.replace(externalUrl.currentRoute);
   }
+};
+
+
+export const openExternalUrlInNewWindow = (url: string, pathname: string) => {
+    // open the external url in a blank window, and then replace with the current
+    // route so we preserve the page we're on without showing a blank react component.
+
+    const externalUrl: ExternalUrl = {
+        url,
+        target: '_blank',
+        currentRoute: pathname
+    };
+
+    openExternalUrl(externalUrl);
 };

@@ -16,8 +16,7 @@ export interface I18NData_HomePage_CasitaFeature {
   blurb: string;
 }
 
-export interface I18NData_HomePage extends I18NData_IPage {
-  pageHeading: string;
+export interface I18NData_HomePage extends I18NData_IPageWithHeading {
   casitaMariposaHeading: string;
   casitaJardinHeading: string;
   casitaBirdhouseHeading: string;
@@ -26,26 +25,34 @@ export interface I18NData_HomePage extends I18NData_IPage {
   casitasFeatures: I18NData_HomePage_CasitaFeature[];
   intro: string;
 }
-export interface I18NData_ElJardinPage extends I18NData_IPageWithHeading {
+export interface I18NData_ElJardinPage extends I18NData_CasitaPage {
 
 }
-export interface I18NData_MariposaPage extends I18NData_IPageWithHeading {
+export interface I18NData_MariposaPage extends I18NData_CasitaPage {
 
 }
-export interface I18NData_BirdhousePage extends I18NData_IPageWithHeading {
-
-}
-export interface I18NData_CasitasPage extends I18NData_IPageWithHeading {
+export interface I18NData_BirdhousePage extends I18NData_CasitaPage {
 
 }
 export interface I18NData_LocationPage extends I18NData_IPageWithHeading {
 
 }
-export interface I18NData_ResourcesPage extends I18NData_IPageWithHeading {
-
-}
 export interface I18NData_ContactPage extends I18NData_IPageWithHeading {
 
+}
+
+export interface I18NData_CasitaPage extends I18NData_IPageWithHeading {
+  featureATitle: string;
+  featureBTitle: string;
+  featuresA: I18NData_CasitaFeature[];
+  featuresB: I18NData_CasitaFeature[];
+  gridImageIds: string[]
+  sliderImageIds: string[]
+}
+
+export interface I18NData_CasitaFeature {
+  icon: string;
+  label: string;
 }
 export interface I18NData_IPageWithHeading extends I18NData_IPage {
   pageHeading: string;
@@ -56,12 +63,10 @@ export interface I18NData_IPageWithHeading extends I18NData_IPage {
  */
 export interface I18NData_AppContent extends I18NData_ISiteContent {
   home: I18NData_HomePage;
-  casitas: I18NData_CasitasPage;
   eljardin: I18NData_ElJardinPage;
   mariposa: I18NData_MariposaPage;
   birdhouse: I18NData_BirdhousePage;
   location: I18NData_LocationPage;
-  resources: I18NData_ResourcesPage;
   contact: I18NData_ContactPage;
 }
 

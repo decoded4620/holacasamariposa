@@ -1,9 +1,7 @@
 import Box from "@mui/material/Box";
 import { Button, Toolbar } from "@mui/material";
-import React, { useEffect } from "react";
 import styles from "./footer.module.scss";
 import { ButtonId, IdButtonHandler, ButtonData } from "../core/types";
-import { getWindowWidth, windowResizeEffect } from "../resize/resizeListener";
 
 export interface FooterProps {
   handleNavItemClick: IdButtonHandler;

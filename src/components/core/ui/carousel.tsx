@@ -62,7 +62,7 @@ export default function Carousel(props: CarouselProps) {
             }}
           >
             {/* <p>{image.title}</p> */}
-            <img src={image.src}/>
+            <img src={image.src} alt=""/>
           </SwiperSlide>
         ))}
       </Swiper>

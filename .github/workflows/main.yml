@@ -1,0 +1,28 @@
+on: push
+name: 🚀 Deploy Website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get Latest Code
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 16
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: 🔨 Build Project
+      run: |
+        yarn install
+        yarn run build
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ftp.samkirkland.com
+        username: github@holacasamariposa.com
+        password: ${{ secrets.ftp_password }}
+        local-dir: build/
+        server-dir: test/

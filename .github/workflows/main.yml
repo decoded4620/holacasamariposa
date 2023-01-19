@@ -1,11 +1,11 @@
 on: push
-name: 🚀 Deploy Website on push
+name: 🚀 Deploy Website on Push
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get Latest Code
+    - name: 🚚 Getting Latest Code
       uses: actions/checkout@v2
 
     - name: Use Node.js 16
@@ -18,11 +18,10 @@ jobs:
         yarn install
         yarn run build
 
-    - name: 📂 Sync files
+    - name: 📂 Uploading Files to Webhost via FTP
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: dearlydecoded.com
         username: github@holacasamariposa.com
         password: ${{ secrets.ftp_password }}
         local-dir: build/
-        server-dir: test/

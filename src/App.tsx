@@ -188,7 +188,7 @@ export default function App() {
 
         <SlidingMenu
           ref={slidingMenu}
-          menuItems={menuItems.concat(mobileMenuItems).concat(footerMenuItems)}
+          menuItems={menuItems.concat(footerMenuItems)}
           onMenuItemClick={(id) => onMenuItemClicked(id)}
         />
 

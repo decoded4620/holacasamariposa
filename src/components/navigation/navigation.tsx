@@ -80,7 +80,7 @@ export default function Navigation(props: NavigationProps) {
               <Button key={i} className={props.darkMode
               ? styles.menubuttonDark
               : styles.menubuttonLight}
-            onClick={(event: unknown) => onNavItemClicked(menuItemData.id)}>menuItemData.label</Button>
+            onClick={(event: unknown) => onNavItemClicked(menuItemData.id)}>{menuItemData.label}</Button>
             )}
           </Box>
         ) : null}

@@ -3,6 +3,7 @@ import { Button, Toolbar } from "@mui/material";
 import styles from "./footer.module.scss";
 import { ButtonId, IdButtonHandler, ButtonData } from "../core/types";
 import React from "react";
+import HyperlinkedText from "../core/buttons/hyperlinked-text";
 
 export interface FooterProps {
   handleNavItemClick: IdButtonHandler;
@@ -23,18 +24,28 @@ export default function Footer(props: FooterProps) {
   return (
     <Box className={styles.footer}>
       <Toolbar className={styles.footertoolbar}>
-        {props.menuItems.map((menuItemData, i) =>
-          React.createElement(
-            Button,
-            {
-              key: i, // needed for react createElement to work
-              color: "inherit",
-              className: styles.footerbutton,
-              onClick: (_event: unknown) => onNavItemClicked(menuItemData.id),
-            },
-            menuItemData.label
-          )
-        )}
+        {props.menuItems.map((menuItemData, i) => (
+          <Button
+            key={i}
+            color="inherit"
+            className={styles.footerbutton}
+            onClick={(_event: unknown) => onNavItemClicked(menuItemData.id)}
+          >
+            {menuItemData.label}
+          </Button>
+        ))}
+        <Box className={styles.footeritem}>
+        <HyperlinkedText
+          label="House Rules (ES)"
+          link="https://docs.google.com/viewerng/viewer?url=https://cdn-casamariposa.s3.us-east-2.amazonaws.com/house_rules_es.pdf"
+        />
+        </Box>
+        <Box className={styles.footeritem}>
+        <HyperlinkedText
+          label="House Rules (EN)"
+          link="https://docs.google.com/viewerng/viewer?url=https://cdn-casamariposa.s3.us-east-2.amazonaws.com/house_rules_en.pdf"
+        />
+        </Box>
       </Toolbar>
     </Box>
   );

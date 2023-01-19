@@ -21,7 +21,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp.holacasamariposa.com
+        server: ftp.dearlydecoded.com
         username: github@holacasamariposa.com
         password: ${{ secrets.ftp_password }}
         local-dir: build/

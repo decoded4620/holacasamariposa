@@ -77,18 +77,10 @@ export default function Navigation(props: NavigationProps) {
         {width > props.mobileViewMaxWidth ? (
           <Box className={styles.menubox}>
             {props.menuItems.map((menuItemData, i) =>
-              React.createElement(
-                Button,
-                {
-                  key: i, // needed for react createElement to work
-                  className: props.darkMode
-                    ? styles.menubuttonDark
-                    : styles.menubuttonLight,
-                  onClick: (event: unknown) =>
-                    onNavItemClicked(menuItemData.id),
-                },
-                menuItemData.label
-              )
+              <Button key={i} className={props.darkMode
+              ? styles.menubuttonDark
+              : styles.menubuttonLight}
+            onClick={(event: unknown) => onNavItemClicked(menuItemData.id)}>menuItemData.label</Button>
             )}
           </Box>
         ) : null}

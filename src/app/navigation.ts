@@ -27,9 +27,7 @@ export const menuItems: ButtonData[] = [
 
 
 export const mobileMenuItems: ButtonData[] = [
-  { id: "eljardin", label: "El Jardin" },
-  { id: "mariposa", label: "Casa Mariposa" },
-  { id: "birdhouse", label: "The Birdhouse" },
+
 ];
 
 export const footerMenuItems: ButtonData[] = [

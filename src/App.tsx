@@ -43,7 +43,6 @@ import Home from "./pages/home";
 import {
   footerMenuItems,
   menuItems,
-  mobileMenuItems,
   navigateTo,
 } from "./app/navigation";
 import ElJardin from "./pages/eljardin";

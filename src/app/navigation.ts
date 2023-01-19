@@ -25,13 +25,6 @@ export const menuItems: ButtonData[] = [
   { id: "birdhouse", label: "The Birdhouse" },
 ];
 
-
-export const mobileMenuItems: ButtonData[] = [
-  { id: "eljardin", label: "El Jardin" },
-  { id: "mariposa", label: "Casa Mariposa" },
-  { id: "birdhouse", label: "The Birdhouse" },
-];
-
 export const footerMenuItems: ButtonData[] = [
   { id: "our_airbnb", label: "Your Host" },
 ];

@@ -103,6 +103,7 @@ function HomePage(props: HomePageProps) {
             <ContactCardBar
               sectionHeading="Contact Us"
               sectionText="Through any of the following channels..."
+              emailAddress="hola.casa.mariposa@gmail.com"
               handleCardSelect={(id) => navigateTo(id, props.navigate)}
             />
             <ContactCardBarButton

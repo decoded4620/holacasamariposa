@@ -3,10 +3,12 @@ import { ButtonId } from "../../components/core/types";
 import ContactCardBarButton from "./contact-card-bar-button";
 import styles from "./contact-card-bar.module.scss";
 import globalstyles from "../../shared-global-styles.module.scss";
+import HyperlinkedText from "../../components/core/buttons/hyperlinked-text";
 
 export interface ContactCardBarProps {
   sectionHeading: string;
   sectionText: string;
+  emailAddress: string;
   handleCardSelect: (id: ButtonId) => void
 }
 
@@ -16,7 +18,9 @@ const ContactCardBar = (props: ContactCardBarProps) => {
     <Box className={styles.contactcardcontainer} component="article">
       <Box component="div">
       <h1 className={styles.sectionHeading}>{props.sectionHeading}</h1>
+      <p>Please email us at <HyperlinkedText link={`mailto:${props.emailAddress}?subject=Casa Mariposa Inquiry&body=Hello Heidi,`} label={props.emailAddress}/> or...</p>
       <p>{props.sectionText}</p>
+
       </Box>
 
       <Toolbar className={styles.contactcardbar} component="div">

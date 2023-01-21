@@ -31,6 +31,7 @@
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
+    "react-toastify": "^9.1.1",
     "sass": "^1.54.8",
     "sequelize": "^6.6.5",
     "swiper": "^8.4.5",
@@ -57,7 +58,6 @@
     "test:integration": "jest --config jest-integration.config.ts",
     "eject": "react-scripts eject",
     "generate-meta-tag": "node ./node_modules/react-cache-buster/dist/generate-meta-tag.js"
-
   },
   "eslintConfig": {
     "extends": [

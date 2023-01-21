@@ -18,9 +18,9 @@ const ContactCardBar = (props: ContactCardBarProps) => {
     <Box className={styles.contactcardcontainer} component="article">
       <Box component="div">
       <h1 className={styles.sectionHeading}>{props.sectionHeading}</h1>
-      <p>Please email us at <HyperlinkedText link={`mailto:${props.emailAddress}?subject=Casa Mariposa Inquiry&body=Hello Heidi,`} label={props.emailAddress}/> or...</p>
+      <p>Please email us at <HyperlinkedText link={`mailto:${props.emailAddress}?subject=Casa Mariposa Inquiry&body=Hello Heidi,`} label={props.emailAddress} enableCopy={true}
+          copyLabel={true}/> or...</p>
       <p>{props.sectionText}</p>
-
       </Box>
 
       <Toolbar className={styles.contactcardbar} component="div">

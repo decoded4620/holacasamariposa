@@ -38,12 +38,16 @@ export default function Footer(props: FooterProps) {
         <HyperlinkedText
           label="House Rules (ES)"
           link="https://docs.google.com/viewerng/viewer?url=https://cdn-casamariposa.s3.us-east-2.amazonaws.com/house_rules_es.pdf"
+          enableCopy={true}
+          copyLabel={false}
         />
         </Box>
         <Box className={styles.footeritem}>
         <HyperlinkedText
           label="House Rules (EN)"
           link="https://docs.google.com/viewerng/viewer?url=https://cdn-casamariposa.s3.us-east-2.amazonaws.com/house_rules_en.pdf"
+          enableCopy={true}
+          copyLabel={false}
         />
         </Box>
       </Toolbar>

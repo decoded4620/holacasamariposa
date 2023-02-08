@@ -53,6 +53,7 @@ import ExternalLinkInstagramProfile from "./pages/external/externalLinkInstagram
 import ExternalLinkLinkedInProfile from "./pages/external/externalLinkLinkedInProfile";
 import ExternalLinkGmail from "./pages/external/externalLinkGmail";
 import LoaderSpinner from "./components/core/ui/loader-spinner";
+import ExternalLinkHouseRules from "./pages/external/externalLinkHouseRules";
 
 fontAwesomeSvgConfig.autoAddCss = false
 
@@ -162,7 +163,7 @@ export default function App() {
 
   return (
     <CacheBuster
-      currentVersion={1.0}
+      currentVersion={"1.0"}
       isEnabled={isProduction} //If false, the library is disabled.
       isVerboseMode={false} //If true, the library writes verbose logs to console.
       loadingComponent={
@@ -262,6 +263,8 @@ export default function App() {
               />
 
               {/* external links */}
+              <Route path="/houserules/es" element={<ExternalLinkHouseRules lang="es" />} />
+              <Route path="/houserules/en" element={<ExternalLinkHouseRules lang="en" />} />
               <Route path="/ourfb" element={<ExternalLinkFBProfile />} />
               <Route path="/ourig" element={<ExternalLinkInstagramProfile />} />
               <Route path="/ourli" element={<ExternalLinkLinkedInProfile />} />

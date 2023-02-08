@@ -3,7 +3,7 @@ import { Button, Toolbar } from "@mui/material";
 import styles from "./footer.module.scss";
 import { ButtonId, IdButtonHandler, ButtonData } from "../core/types";
 import React from "react";
-import HyperlinkedText from "../core/buttons/hyperlinked-text";
+import HyperlinkedText from "../core/buttons/hyperlinked-text"
 
 export interface FooterProps {
   handleNavItemClick: IdButtonHandler;
@@ -37,7 +37,7 @@ export default function Footer(props: FooterProps) {
         <Box className={styles.footeritem}>
         <HyperlinkedText
           label="House Rules (ES)"
-          link="https://docs.google.com/viewerng/viewer?url=https://cdn-casamariposa.s3.us-east-2.amazonaws.com/house_rules_es.pdf"
+          link="https://cdn-casamariposa.s3.us-east-2.amazonaws.com/house_rules_es.pdf"
           enableCopy={true}
           copyLabel={false}
         />
@@ -45,7 +45,7 @@ export default function Footer(props: FooterProps) {
         <Box className={styles.footeritem}>
         <HyperlinkedText
           label="House Rules (EN)"
-          link="https://docs.google.com/viewerng/viewer?url=https://cdn-casamariposa.s3.us-east-2.amazonaws.com/house_rules_en.pdf"
+          link="https://cdn-casamariposa.s3.us-east-2.amazonaws.com/house_rules_en.pdf"
           enableCopy={true}
           copyLabel={false}
         />

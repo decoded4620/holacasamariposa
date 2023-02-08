@@ -22,13 +22,14 @@ export const openExternalUrl = (externalUrl: ExternalUrl) => {
 };
 
 
-export const openExternalUrlInNewWindow = (url: string, pathname: string) => {
+export const openExternalUrlWithTarget = (url: string, pathname: string, target = '_blank') => {
     // open the external url in a blank window, and then replace with the current
     // route so we preserve the page we're on without showing a blank react component.
+    console.log(`Open External URL ${url}`);
 
     const externalUrl: ExternalUrl = {
         url,
-        target: '_blank',
+        target: target,
         currentRoute: pathname
     };
 
